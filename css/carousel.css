@@ -1,0 +1,59 @@
+.carousel-caption{
+    bottom: 40%;
+}
+
+.carousel-caption h5{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.carousel-caption h5:hover, p:hover {
+    color: paleturquoise
+}
+
+/* Media querys */
+@media only screen and (max-width: 1200px) {
+    .carousel-caption{
+        bottom: 30%;
+    }
+  }
+  @media only screen and (max-width: 960px) {
+    .carousel-caption{
+        bottom: 15%;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+      .carousel-caption {
+        bottom: 30%;
+      }
+    .carousel-caption h5{
+        font-size: 20px;
+    }
+    
+    .carousel-caption p {
+        display: none;
+    }
+
+    .carousel-btn {
+        font-size: 80%;
+        width: 60%;
+    }
+}
+    @media only screen and (max-width: 400px) {
+        .carousel-caption {
+            bottom: 20%;
+        }
+        .carousel-caption h5{
+            font-size: 15px;
+        }
+    
+        .carousel-caption p {
+            display: none;
+        }
+
+        .carousel-btn{
+            font-size: 60%;
+            width: 50%;
+        }
+}
