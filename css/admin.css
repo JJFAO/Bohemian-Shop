@@ -1,0 +1,48 @@
+body {
+    overflow: hidden;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+}
+
+#sidebar-container .logo {
+    padding: 35px;
+}
+
+#sidebar-container .menu {
+    width: 18rem;
+}
+
+.navbar-logo {
+    width: 70px;
+    height: 30px;
+}
+
+.admin-icon {
+    width: 30px;
+}
+
+.horizontal-nav {
+    border-bottom: 1px solid black;
+}
+
+.avatar {
+    max-width: 35px;
+}
+
+#content {
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+    #sidebar-container {
+      display: none;
+    }
+  }
