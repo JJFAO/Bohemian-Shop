@@ -41,6 +41,10 @@ a:hover {
     padding-bottom: 5rem;
 }
 
+.product-image {
+    width: 100px;
+}
+
 @media (max-width: 768px) {
     #sidebar-container {
       display: none;
