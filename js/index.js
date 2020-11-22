@@ -1,12 +1,4 @@
-// $(".img-fluid").addClass("wow fadeIn z-depth-1-half");
-
-// new WOW().init();
-
-/*NAVBAR SCROLL EFFECT */
-// $(window).scroll(function(){
-//     $('nav').toggleClass('scrolled',$(this).scrollTop() > 200);
-// });
-
+/*NAVABAR EFFECT */
 $(function () {
     $(document).scroll(function () {
       var $nav = $(".sticky-top");
@@ -15,4 +7,4 @@ $(function () {
   });
 $(".img-fluid").addClass("wow fadeIn z-depth-1-half");
 
-new WOW().init();
+

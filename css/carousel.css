@@ -30,20 +30,6 @@
     text-shadow: none;
     z-index: 5;
     color: #fff;
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    top: 50%;
-    margin-top: -35px;
-    line-height: 70px;
-    border-radius: 50%;
-    color: inherit;
-    background: #1b1b1b;
-    border: 0;
-    opacity: 0.5;
-    text-shadow: none;
-    z-index: 5;
-    color: #fff;
 }
 .carousel-control-prev{
     left: 0;
