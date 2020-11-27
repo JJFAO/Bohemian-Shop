@@ -28,6 +28,10 @@ margin-top: 30vh;
 }
 
 .modal-header{
-background-color: #555555;
-color: #FFFFFF;
+    background-color: #555555;
+    color: #FFFFFF;
+}
+
+#registerModal{
+font-family: 'Lato', sans-serif;s
 }
