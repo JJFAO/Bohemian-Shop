@@ -5,7 +5,7 @@ background-repeat: no-repeat;
 }
 
 #loginArea{
-background-color: #555555;
+background-color: #55555579;
 color: #FFFFFF;
 width: 60vw;
 margin-top: 30vh;
@@ -16,7 +16,12 @@ margin-top: 30vh;
     background-color: #446084;
     color:#FFFFFF;
     border-radius: 10%;
-    margin:2px; 
+    margin:2px;
+}
+
+.btn-log:hover {
+    background-color: #1f4d8a;
+    color: white;
 }
 
 .modal-header{
