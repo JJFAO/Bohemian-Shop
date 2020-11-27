@@ -1,0 +1,25 @@
+body{
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 19%, rgba(68,96,132,1) 100%);
+background-repeat: no-repeat; 
+}
+
+#loginArea{
+background-color: #555555;
+color: #FFFFFF;
+width: 60vw;
+margin-top: 30vh;
+}
+
+.btn-log{
+    border-color: #FFFFFF;
+    background-color: #446084;
+    color:#FFFFFF;
+    border-radius: 10%;
+    margin:2px; 
+}
+
+.modal-header{
+background-color: #555555;
+color: #FFFFFF;
+}
