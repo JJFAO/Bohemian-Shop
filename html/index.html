@@ -18,17 +18,20 @@
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+
     <title>Hello, world!</title>
   </head>
   <body>
+<!--HEADER-->
+<header>
+  <marquee height="20" scrollamount="7" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+    <i class="fas fa-truck"></i> &emsp; Envío gratis desde 3000$ según la zona &emsp; <i class="fas fa-truck"></i>   &emsp; &emsp; &emsp; &emsp; <i class="fas fa-percentage"></i> &emsp; Ofertas especiales cada fin de temporada  &emsp; <i class="fas fa-percentage"></i> &emsp; &emsp; &emsp; &emsp;<i class="fas fa-shipping-fast"></i> &emsp; Envíos express de domingos a jueves &emsp; <i class="fas fa-shipping-fast"></i> &emsp; &emsp;&emsp; &emsp; <i class="fas fa-sync-alt"></i> &emsp; Cambio y devolución gratis a todo el país &emsp; <i class="fas fa-sync-alt"></i> 
+  </marquee>
+</header>
 
 <!--NAVBAR-->
-<header class="section-header py-4 bg-light">
-  <div class="container">
-    <p>Envíos gratis a partir de $2000</p>
-  </div>
-  </header>
   
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top ">
     <div class="container">
@@ -37,12 +40,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="main_nav">
-    <ul class="navbar-nav">
-      <li class="nav-item active"> <a class="nav-link" href="#">Nuevo </a> </li>
-      <li class="nav-item active"><a class="nav-link" href="#"> Trending </a></li>
-      <li class="nav-item active"><a class="nav-link" href="#"> Beauty </a></li>
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active"> <a class="nav-link" href="#carouselExampleControls">Nuevo </a> </li>
+      <li class="nav-item active"><a class="nav-link" href="#Temp21"> Temporada '21</a></li>
       <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Accesorios  </a>
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Productos </a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#"> Mochilas y Carteras</a></li>
           <li><a class="dropdown-item" href="#"> Bijou </a></li>
@@ -51,17 +53,10 @@
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active"><a class="nav-link" href="#Temp21"  data-toggle="collapse" data-parent="#main_nav"> Temporada 21 </a></li>
-      <li class="nav-item active"><a class="nav-link" href="#"> Menu item </a></li>
-      <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown right </a>
-          <ul class="dropdown-menu dropdown-menu-right">
-          <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-          <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
-          </ul>
-      </li>
       <li class="nav-item active"><a class="nav-link" href="../html/cart.html" target="_blank"> <img src="https://www.flaticon.es/svg/static/icons/svg/626/626394.svg" alt="Carrito" width="30" height="30" style="filter: invert(100%)"> </a></li>
-      <li class="nav-item active"><a class="nav-link" href="../html/login.html" target="_blank"> Login </a></li>
+      <li class="nav-item active"><a class="nav-link" href="../html/userProfile.html" target="_blank"> <img src="https://www.flaticon.com/svg/static/icons/svg/456/456283.svg" alt="Perfil de usuario" width="30" height="30" style="filter: invert(100%)"> </a></li>
+      <li class="nav-item active"><a class="nav-link" href="../html/login.html" target="_blank"> Log In </a></li>
+      
     </ul>
     </div> <!-- navbar-collapse.// -->
   </div><!-- container //  -->
