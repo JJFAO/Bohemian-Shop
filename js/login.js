@@ -5,8 +5,9 @@ let usernameInput = document.getElementById('usernameInput');
 let passwordInput = document.getElementById('passwordInput');
 const newUsername = document.getElementById('newUsername');
 const newPassword = document.getElementById('newPassword');
-const newEmail = document.getElementById('newEmail')
-const newBirthdate = document.getElementById('newBirthdate')
+const newEmail = document.getElementById('newEmail');
+const newBirthdate = document.getElementById('newBirthdate');
+const loginError = document.getElementById('loginError');
 // cuenta admin
 const adminAccount = [{
     username: 'admin',
@@ -21,7 +22,7 @@ registerForm.onsubmit = (e) => {
     const password = newPassword.value;
     const email = newEmail.value;
     const birthdate = newBirthdate.value;
-    
+
     users.push({
         username,
         password,
@@ -34,22 +35,25 @@ registerForm.onsubmit = (e) => {
     console.log(users);
 }
 
+
 // Funcion validar usuarios
 loginForm.onsubmit = (e) => {
     e.preventDefault();
     const users = JSON.parse(localStorage.getItem('users')) || [];
-    username = usernameInput.value
-    password = passwordInput.value
-    
-    if (adminAccount.find( admin => admin.username === username && admin.password === password)) {
-        console.log('admin validado');
+    const username = usernameInput.value
+    const password = passwordInput.value
+
+    if (adminAccount.find(admin => admin.username === username && admin.password === password)) {
+        window.location.href = 'admin.html';
     } else if (users.find(user => user.username === username && user.password === password)) {
-        console.log('usuario normal validado');
+        window.location.href = 'index.html';
     } else {
-        console.log('usuario no valido');
+        const row = `
+        <div class="alert alert-danger alert-dismissible" role="alert" >
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Error!</strong> Usuario y/o contraseña erroneos!
+    </div>
+    `
+    loginError.innerHTML = row
     }
 }
-
-
-
-
