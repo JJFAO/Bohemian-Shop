@@ -5,6 +5,8 @@ let usernameInput = document.getElementById('usernameInput');
 let passwordInput = document.getElementById('passwordInput');
 const newUsername = document.getElementById('newUsername');
 const newPassword = document.getElementById('newPassword');
+const newEmail = document.getElementById('newEmail')
+const newBirthdate = document.getElementById('newBirthdate')
 // cuenta admin
 const adminAccount = [{
     username: 'admin',
@@ -17,13 +19,19 @@ registerForm.onsubmit = (e) => {
     const users = JSON.parse(localStorage.getItem('users')) || []
     const username = newUsername.value;
     const password = newPassword.value;
+    const email = newEmail.value;
+    const birthdate = newBirthdate.value;
+    
     users.push({
         username,
         password,
+        email,
+        birthdate
     })
     localStorage.setItem('users', JSON.stringify(users))
     registerForm.reset()
     $('#registerModal').modal('hide')
+    console.log(users);
 }
 
 // Funcion validar usuarios
@@ -41,6 +49,7 @@ loginForm.onsubmit = (e) => {
         console.log('usuario no valido');
     }
 }
+
 
 
 
