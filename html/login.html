@@ -23,8 +23,8 @@
 <body>
   <!-- Form login -->
   <div class="row d-flex justify-content-center">
-    <div class="col-xl-3 col-lg-8 col-md-6 col-sm-9 col-12 d-flex justify-content-center">
-      <div id="loginArea" class="p-5 container rounded">
+    <div>
+      <div id="loginArea" class="p-5 container rounded col-xl-6 col-lg-9 col-md-12 col-sm-12 col-12">
         <h3 class="text-center pb-4">Iniciar sesión</h3>
         <form id="loginForm" class="w-100">
           <div class="form-group">
@@ -43,6 +43,7 @@
               <button type="button" class="btn btn-log" data-toggle="modal"
                 data-target="#registerModal">Registrarse</button>
             </div>
+            
           </div>
         </form>
       </div>
@@ -67,6 +68,15 @@
               <label for="password">Contraseña</label>
               <input type="password" required id="newPassword" class="form-control">
             </div>
+            <div class="form-group">
+              <label for="email">Correo electronico</label>
+              <input type="email" required id="newEmail" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="date">Fecha de nacimiento</label>
+              <input type="date" required id="newBirthdate" class="form-control">
+            </div>
+            
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             <button type="submit" class="btn btn-log">Registrarse</button>
           </form>
