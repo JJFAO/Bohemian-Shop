@@ -17,12 +17,11 @@ function displayGridProducts(products) {
   for (let i = 0; i < products.length; i++) {
       const product = products[i];
       const tbodyContent = `
-      <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4">
   
-          <img src="${products.image}" class="img-fluid mb-4" alt="">
+          <img src="${products.image[0]}" class="img-fluid mb-4" alt="">
   
-          <img src="${products.image}" class="img-fluid mb-4" alt=""
+          <img src="${products.image[1]}" class="img-fluid mb-4" alt=""
             data-wow-delay="0.3s">
   
         </div>
