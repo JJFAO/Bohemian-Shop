@@ -12,6 +12,7 @@ const generateId = function () {
     return '_' + Math.random().toString(36).substr(2, 9);
 };
 
+
 newProductForm.onsubmit = (e) => {
     e.preventDefault();
 
@@ -70,6 +71,7 @@ function displayProducts(products) {
 
 function displayAllProducts() {
     displayProducts(JSON.parse(localStorage.getItem('products')) || []);
+    
 }
 
 displayAllProducts()

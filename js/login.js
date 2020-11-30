@@ -14,6 +14,10 @@ const adminAccount = [{
     password: 'admin123'
 }]
 
+const generateId = function () {
+    return '_' + Math.random().toString(36).substr(2, 9);
+};
+
 // Funcion registrar usuarios
 registerForm.onsubmit = (e) => {
     e.preventDefault();
@@ -27,7 +31,8 @@ registerForm.onsubmit = (e) => {
         username,
         password,
         email,
-        birthdate
+        birthdate,
+        id: generateId()
     })
     localStorage.setItem('users', JSON.stringify(users))
     registerForm.reset()
