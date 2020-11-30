@@ -1,8 +1,18 @@
 /*NAVBAR*/
+.sticky-top{
+  background-color: #446084;
+}
 .sticky-top.scrolled {
-    background-color:rgba(0, 123, 255,.7) !important;
+    background-color: #446084ad  !important;
     transition: background-color 200ms linear;
   }
+/*FUENTES*/
+body{
+font-family: 'Lato', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+font-family: 'Pacifico', cursive; 
+}
 
 /*SECTION*/
 .hovereffect {
