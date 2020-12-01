@@ -37,7 +37,6 @@ registerForm.onsubmit = (e) => {
     localStorage.setItem('users', JSON.stringify(users))
     registerForm.reset()
     $('#registerModal').modal('hide')
-    console.log(users);
 }
 
 
@@ -50,8 +49,15 @@ loginForm.onsubmit = (e) => {
 
     if (adminAccount.find(admin => admin.username === username && admin.password === password)) {
         window.location.href = 'admin.html';
+
     } else if (users.find(user => user.username === username && user.password === password)) {
-        window.location.href = 'index.html';
+        // window.location.href = 'index.html';
+        
+        const logedUser = JSON.parse(localStorage.getItem('logedUser')) || []
+        logedUser.push({
+            username
+        })
+
     } else {
         const row = `
         <div class="alert alert-danger alert-dismissible" role="alert" >
