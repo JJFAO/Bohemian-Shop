@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .carousel-caption{
     bottom: 40%;
 }
@@ -180,4 +181,102 @@
 }
 @media screen and (max-width: 640px){
     .hero h1 { font-size: 4em; }    
+=======
+.carousel-caption{
+    bottom: 40%;
+}
+
+.carousel-caption h5{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.carousel-caption h5:hover, p:hover {
+    color: paleturquoise
+}
+
+/*CAROUSEL CONTROLS*/
+.carousel-control-next{
+    right: 0;
+    margin-right: 2.5rem;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    margin-top: -35px;
+    line-height: 70px;
+    border-radius: 50%;
+    color: inherit;
+    background: #1b1b1b;
+    border: 0;
+    opacity: 0.5;
+    text-shadow: none;
+    z-index: 5;
+    color: #fff;
+}
+.carousel-control-prev{
+    left: 0;
+    margin-left: 2.5rem;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    margin-top: -35px;
+    line-height: 70px;
+    border-radius: 50%;
+    color: inherit;
+    background: #1b1b1b;
+    border: 0;
+    opacity: 0.5;
+    text-shadow: none;
+    z-index: 5;
+    color: #fff;
+}
+
+/* Media querys */
+@media only screen and (max-width: 1200px) {
+    .carousel-caption{
+        bottom: 30%;
+    }
+  }
+  @media only screen and (max-width: 960px) {
+    .carousel-caption{
+        bottom: 15%;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+      .carousel-caption {
+        bottom: 30%;
+      }
+    .carousel-caption h5{
+        font-size: 20px;
+    }
+    
+    .carousel-caption p {
+        display: none;
+    }
+
+    .carousel-btn {
+        font-size: 80%;
+        width: 60%;
+    }
+}
+    @media only screen and (max-width: 400px) {
+        .carousel-caption {
+            bottom: 20%;
+        }
+        .carousel-caption h5{
+            font-size: 15px;
+        }
+    
+        .carousel-caption p {
+            display: none;
+        }
+
+        .carousel-btn{
+            font-size: 60%;
+            width: 50%;
+        }
+>>>>>>> 8a566a35b8687cef792f28e7461aa3f4ea4f8620
 }
