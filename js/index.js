@@ -22,12 +22,11 @@ function displayGridProducts() {
             <img src="${product.image}" class="img-fluid productImage" alt="image1">
             <div class="ovrly"></div>
               <div class="buttons">
-                <a href="#" class="fa fa-info"></a>
+                <a href="#productModal" class="fa fa-info" data-toggle="modal" data-target="#productModal" onclick="${product.id}"></a>
                 <a href="#" class="fa fa-shopping-cart"></a>
               </div>
           </div>
         </div>
-
       `
       almacenator.push(tbodyContent)
   }
@@ -35,3 +34,28 @@ function displayGridProducts() {
 }
 
 displayGridProducts()
+
+// const getModal = (product) => {
+//   return `
+//   <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+//   <div class="modal-dialog" role="document">
+//     <div class="modal-content">
+//       <div class="modal-header">
+//         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//           <span aria-hidden="true">&times;</span>
+//         </button>
+//       </div>
+//       <div class="modal-body">
+        
+//       </div>
+//       <div class="modal-footer">
+//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+//         <button type="button" class="btn btn-primary">Añadir al carrito</button>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//       `;
+
+// }
