@@ -9,14 +9,12 @@ function detectLogedUser() {
 
   if (Array.isArray(logedUser)) {
     logInButton.innerHTML = `
-      <a class="nav-link" href="../html/userProfile.html" target="_blank">${logedUser}</a>
+      <a class="nav-link" href="../html/userProfile.html" target="_blank">${logedUser[0][0].username}</a>
       `
-      console.log('awa');
   } else {
     logInButton.innerHTML = `
     <a class="nav-link" href="../html/login.html" target="_blank"> Log In </a>
     `
-    console.log(owo);
   }
 }
 
