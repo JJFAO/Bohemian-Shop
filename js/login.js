@@ -51,12 +51,11 @@ loginForm.onsubmit = (e) => {
         window.location.href = 'admin.html';
 
     } else if (users.find(user => user.username === username && user.password === password)) {
-        // window.location.href = 'index.html';
-        
+        window.location.href = 'index.html';
         const logedUser = JSON.parse(localStorage.getItem('logedUser')) || []
-        logedUser.push({
-            username
-        })
+        const user = username
+        logedUser.push(user)
+        localStorage.setItem('logedUser', JSON.stringify(logedUser))
 
     } else {
         const row = `
