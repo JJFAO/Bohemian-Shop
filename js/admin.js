@@ -12,6 +12,7 @@ const generateId = function () {
     return '_' + Math.random().toString(36).substr(2, 9);
 };
 
+
 newProductForm.onsubmit = (e) => {
     e.preventDefault();
 
@@ -70,6 +71,7 @@ function displayProducts(products) {
 
 function displayAllProducts() {
     displayProducts(JSON.parse(localStorage.getItem('products')) || []);
+    
 }
 
 displayAllProducts()
@@ -119,3 +121,36 @@ editProductForm.onsubmit = (e) => {
     $('#editProductModal').modal('hide')
   }
 
+  function deleteUser(userId) {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const filteredUsers = users.filter((users) => users.id !== userId);
+    localStorage.setItem('users', JSON.stringify(filteredUsers));
+    displayUsers();
+  }
+
+  function displayUsers() {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    users.id
+    const almacenator = []
+    for (let i = 0; i < users.length; i++) {
+        const user = users[i];
+        const tbodyContent = `
+        <tr>
+            <th scope="row">${user.username}</th>
+                    <td>${user.id}</td>
+                    <td>
+                        <div class="text-center">
+                            <div class="p-2">
+                                <button class="btn btn-outline-danger" onclick="deleteUser('${user.id}')">Eliminar</button>
+                            </div>
+                        </div>
+                    </td>
+            </th>
+        </tr>
+        `
+        almacenator.push(tbodyContent)
+    }
+    userTable.innerHTML = almacenator.join('')
+}
+
+displayUsers()
