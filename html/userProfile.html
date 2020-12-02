@@ -63,96 +63,56 @@
 <main>
         <div class="row mx-0">
 
-            <div class="col-2 px-3 py-2 bg-two">
-                <div class="wrapper" style="max-width: 650px;">
-                    <!-- Sidebar -->
-                    <nav id="sidebar" class="">
-                        <div class="sidebar-header">
-                            <h3>Mi cuenta?</h3>
-                        </div>
-                
-                        <ul class="list-unstyled components">
-                            <p>Subtitulo</p>
-                            <li class="active">
-                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class=""><i class="fas fa-shopping-bag"></i> Mis compras</a>
-                                <ul class="collapse" id="homeSubmenu">
-                                    <li>
-                                        <button class="btn btn-outline-light">Compras</button>
-                                    </li>
-                                    <li>
-                                        <button class="btn btn-outline-light">Favoritos</button>
-                                    </li>
-                                    <li>
-                                        <button class="btn btn-outline-light">En camino</button>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><i class="far fa-credit-card"></i> Mis tarjetas</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="far fa-address-card"></i> Mis datos</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                
-                </div>
-            </div>
             
             <div class="col-10 py-4" style="min-height: 700px;">
                 <div class="container">
-                    
-                    <section id=""> 
-                        <h3>Datos de la cuenta</h3>
-                    </section>
-                    <div class="card border-0">
-                        <div class="card-body bg-three card-nombre">
-                            <ul class="list-group py-1">
-                                <li class="list-group-item list-group-item-info">
-                                    <div class="row">
-                                        <div class="col-4">Nombre</div>
-                                        <div class="col-7">${nombre}</div>
-                                        <div class="col-1 d-flex align-items-center justify-content-end"><i class="far fa-edit"></i></div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item list-group-item-info">
-                                    <div class="row">
-                                        <div class="col-4">E-mail</div>
-                                        <div class="col-7">${email}</div>
-                                        <div class="col-1 d-flex align-items-center justify-content-end"><i class="far fa-edit"></i></div>
-                                    </div>
-                                </li>
-                            </ul>
+                    <section class="row">
+                      <div class="col-4">
+                        <div class="card">
+                          <img src="/img/user-profile-default.png" alt="John" class="w-100 rounded-circle">
+                          <h1>John Doe</h1>
+                          <p class="title">${}</p>
+                          <p>Harvard University</p>
+                          <a href="#" class="profile-card-a"><i class="fa fa-dribbble"></i></a>
+                          <a href="#" class="profile-card-a"><i class="fa fa-twitter"></i></a>
+                          <a href="#" class="profile-card-a"><i class="fa fa-linkedin"></i></a>
+                          <a href="#" class="profile-card-a"><i class="fa fa-facebook"></i></a>
+                          <p><button class="profile-button">Contact</button></p>
                         </div>
-                    </div>
-                    <hr>
-                    <section id=""> 
-                        <h3>Datos de la cuenta</h3>
+                      </div>
+                      <div class="8">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">First</th>
+                              <th scope="col">Last</th>
+                              <th scope="col">Handle</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
-                    <div class="card border-0">
-                        <div class="card-body bg-three card-nombre">
-                            <ul class="list-group py-2">
-                                <li class="list-group-item list-group-item-info">
-                                    <div class="row">
-                                        <div class="col-4">Nombre</div>
-                                        <div class="col-7">${nombre}</div>
-                                        <div class="col-1 d-flex align-items-center justify-content-end"><i class="far fa-edit"></i></div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item list-group-item-info">
-                                    <div class="row">
-                                        <div class="col-4">E-mail</div>
-                                        <div class="col-7">${email}</div>
-                                        <div class="col-1 d-flex align-items-center justify-content-end"><i class="far fa-edit"></i></div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">Boton por las dudas</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
