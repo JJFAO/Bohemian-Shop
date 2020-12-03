@@ -37,7 +37,10 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top ">
     <div class="container">
-    <a class="navbar-brand" href="#">Logo</a>
+      <div id="logo">
+        <img src="../img/bohemian_white.png" class="image_full" height="40">
+        <img src="../img/b_white.png"  class="image_mobile" height="30">
+      </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,18 +48,10 @@
     <ul class="navbar-nav mx-auto">
       <li class="nav-item active"> <a class="nav-link" href="#carouselExampleControls">Nuevo </a> </li>
       <li class="nav-item active"><a class="nav-link" href="#Temp21"> Temporada '21</a></li>
-      <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Productos </a>
-          <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#"> Mochilas y Carteras</a></li>
-          <li><a class="dropdown-item" href="#"> Bijou </a></li>
-          <li><a class="dropdown-item" href="#"> Acc. Pelo </a></li>
-          </ul>
-      </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active"><a class="nav-link" href="../html/cart.html" target="_blank"> <img src="https://www.flaticon.es/svg/static/icons/svg/626/626394.svg" alt="Carrito" width="30" height="30" style="filter: invert(100%)"> </a></li>
-      <li class="nav-item active"><a class="nav-link" href="../html/userProfile.html" target="_blank"> <img src="https://www.flaticon.com/svg/static/icons/svg/456/456283.svg" alt="Perfil de usuario" width="30" height="30" style="filter: invert(100%)"> </a></li>
+      <li class="nav-item active"><a class="nav-link" href="../html/cart.html" target="_blank"> <img src="https://www.flaticon.es/svg/static/icons/svg/626/626394.svg" alt="Carrito" width="20" height="20" style="filter: invert(100%)"> </a></li>
+      <li class="nav-item active"><a class="nav-link" href="../html/userProfile.html" target="_blank"> <img src="https://www.flaticon.com/svg/static/icons/svg/456/456283.svg" alt="Perfil de usuario" width="20" height="20" style="filter: invert(100%)"> </a></li>
       <li class="nav-item active" id="logInButton"></li>
       
     </ul>
@@ -303,19 +298,19 @@
         </div>
         <div class="col-lg-3 text-center py-1">
           <h5> Redes</h5>
-          <div class="py-4">
-            <img src="../img/ins1.png" alt="Logo Instagram" height="30">
-            <img src="../img/f1.png" alt="Logo Facebook" height="30" >
-            <img src="../img/yt1.png" alt="Logo YouTube" height="30" >
-            <img src="../img/tw1.png" alt="Logo Twitter" height="30" >
+          <div class="py-3">
+            <img src="../img/ins1.png" alt="Logo Instagram" height="30" style="margin:0px 2px">
+            <img src="../img/f1.png" alt="Logo Facebook" height="30" style="margin:0px 2px">
+            <img src="../img/yt1.png" alt="Logo YouTube" height="30" style="margin:0px 2px">
+            <img src="../img/tw1.png" alt="Logo Twitter" height="30" style="margin:0px 2px">
           </div>
         </div>
         <div class="col-lg-3 text-center py-1">
           <h5> Medios de pago aceptados </h5>
-          <div class="py-4">
-            <img src="../img/sy1.png" alt="Logo Instagram" height="40">
-            <img src="../img/mo1.png" alt="Logo Facebook" height="40" >
-            <img src="../img/mas1.png" alt="Logo YouTube" height="40" >
+          <div class="py-3">
+            <img src="../img/sy1.png" alt="Logo Instagram" height="40"style="margin:0px 2px">
+            <img src="../img/mo1.png" alt="Logo Facebook" height="40" style="margin:0px 2px">
+            <img src="../img/mas1.png" alt="Logo YouTube" height="40" style="margin:0px 2px">
           </div>
         </div>
         <div class="col-lg-3  text-center py-1">
@@ -334,19 +329,19 @@
           <h5> Suscríbete </h5>
           <form action="suscription">
             <label for="email"></label>
-            <input type="text">
-            <button type="submit" id="suscription"><i class="fa fa-save"></i></button>
+            <input type="text" placeholder="Email" id="inpsuscription" style="caret-color: #446084;">
+            <button type="submit" id="btnsuscription"><i class="fa fa-save"></i></button>
           </form>
         </div>
       <div class="row justify-content-center">
-        <div class="col-3"> 
+        <div class="col-3 text-center"> 
           <p> Circuito Moda Sostenible Argentina:
          <a href="https://amsoar.com.ar/circuito/" target="_blank"><img src="https://amsoar.com.ar/wp-content/uploads/2019/02/AMSOAR_2019_N.png" alt="" height="30"></a> </p>
         </div>
-        <div class="col-3"> 
+        <div class="col-3 text-center"> 
                  © 2020 Copyright:        <a href="https://github.com/Knifucrab/Grupo-5-Comision-5i-Proyecto-JS" target="_blank" style="text-decoration: none; color:#ffffff" >Grupo 5 RCS </a> 
                 </div>
-        <div class="col-3">
+        <div class="col-3 text-center">
           <p>Créditos de las imágenes:
           <a href="https://unsplash.com/" target="_blank"><img src="https://cdn-images-1.medium.com/max/2600/1*vQ5EsgnJkANWb5fktHPwnw.jpeg" alt="Unsplasah" height="30"></a>
           <a href="https://www.flaticon.com/" target="_blank"><img src="https://image.flaticon.com/icons/png/512/64/64186.png" alt="Freepick" height="30"></a> </p>
