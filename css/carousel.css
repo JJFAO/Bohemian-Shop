@@ -1,15 +1,11 @@
-.carousel-caption{
+.first-carousel-caption{
     bottom: 40%;
 }
 
-.carousel-caption h5{
+.first-carousel-caption h5{
     font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-.carousel-caption h5:hover, p:hover {
-    color: paleturquoise
 }
 
 /*CAROUSEL CONTROLS*/
@@ -124,7 +120,7 @@
 
 
 
-/*Overla*/
+/*Overlay*/
 .overlay {
     position: absolute;
     width: 100%;
@@ -147,13 +143,13 @@
 }
 
 /*Slides backgrounds*/
-.carousel-fade .carousel-item {
+.carousel-fade .second-carousel-item {
 	opacity: 0;
 	transition-duration: .1s;
 	transition-property: opacity;
 }
 
-.carousel-fade .carousel-item.active,
+.carousel-fade .second-carousel-item.active,
 .carousel-fade .carousel-item-next.carousel-item-left,
 .carousel-fade .carousel-item-prev.carousel-item-right {
 	opacity: 1;
@@ -166,7 +162,7 @@
 
 .carousel-fade .carousel-item-next,
 .carousel-fade .carousel-item-prev,
-.carousel-fade .carousel-item.active,
+.carousel-fade .second-carousel-item.active,
 .carousel-fade .active.carousel-item-left,
 .carousel-fade .active.carousel-item-prev {
 	transform: translateX(0);
@@ -193,73 +189,37 @@
 }
 @media screen and (max-width: 640px){
     .hero h1 { font-size: 4em; }    
-.carousel-caption{
+.second-carousel-caption{
     bottom: 40%;
 }
 
-.carousel-caption h5{
+.second-carousel-caption h5{
     font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.carousel-caption h5:hover, p:hover {
+.second-carousel-caption h5:hover, p:hover {
     color: paleturquoise
 }
 
-/*CAROUSEL CONTROLS*/
-.carousel-control-next{
-    right: 0;
-    margin-right: 2.5rem;
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    top: 50%;
-    margin-top: -35px;
-    line-height: 70px;
-    border-radius: 50%;
-    color: inherit;
-    background: #1b1b1b;
-    border: 0;
-    opacity: 0.5;
-    text-shadow: none;
-    z-index: 5;
-    color: #fff;
-}
-.carousel-control-prev{
-    left: 0;
-    margin-left: 2.5rem;
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    top: 50%;
-    margin-top: -35px;
-    line-height: 70px;
-    border-radius: 50%;
-    color: inherit;
-    background: #1b1b1b;
-    border: 0;
-    opacity: 0.5;
-    text-shadow: none;
-    z-index: 5;
-    color: #fff;
-}
+
 
 /* Media querys */
 @media only screen and (max-width: 1200px) {
-    .carousel-caption{
-        bottom: 30%;
+    .second-carousel-caption{
+        bottom: 0%;
     }
   }
   @media only screen and (max-width: 700px) {
-      .carousel-caption {
+      .second-carousel-caption {
         bottom: 30%;
       }
-    .carousel-caption h5{
+    .second-carousel-caption h5{
         font-size: 20px;
     }
     
-    .carousel-caption p {
+    .second-carousel-caption p {
         display: none;
     }
 
@@ -268,15 +228,21 @@
         width: 60%;
     }
 }
+
+@media only screen and (max-width: 961px) {
+    .second-carousel-caption {
+        bottom: 100%;
+      }
+
     @media only screen and (max-width: 400px) {
-        .carousel-caption {
+        .second-carousel-caption {
             bottom: 20%;
         }
-        .carousel-caption h5{
+        .second-carousel-caption h5{
             font-size: 15px;
         }
     
-        .carousel-caption p {
+        .second-carousel-caption p {
             display: none;
         }
 
@@ -287,14 +253,14 @@
 }
 
 @media only screen and (max-width: 400px) {
-    .carousel-caption {
+    .second-carousel-caption {
         bottom: 20%;
     }
-    .carousel-caption h5{
+    .second-carousel-caption h5{
         font-size: 15px;
     }
 
-    .carousel-caption p {
+    .second-carousel-caption p {
         display: none;
     }
 
