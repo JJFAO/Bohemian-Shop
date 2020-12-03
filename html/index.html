@@ -20,8 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
+    <!--Icono-->
+    <link rel="shortcut icon" href="../img/b_darkblue.png" type="image/x-icon">
 
-    <title>Hello, world!</title>
+    <title>Bohemian</title>
   </head>
   <body>
 <!--HEADER-->
@@ -35,7 +37,10 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top ">
     <div class="container">
-    <a class="navbar-brand" href="#">Logo</a>
+      <div id="logo">
+        <img src="../img/bohemian_white.png" class="image_full" height="40">
+        <img src="../img/b_white.png"  class="image_mobile" height="30">
+      </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -43,18 +48,10 @@
     <ul class="navbar-nav mx-auto">
       <li class="nav-item active"> <a class="nav-link" href="#carouselExampleControls">Nuevo </a> </li>
       <li class="nav-item active"><a class="nav-link" href="#Temp21"> Temporada '21</a></li>
-      <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Productos </a>
-          <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#"> Mochilas y Carteras</a></li>
-          <li><a class="dropdown-item" href="#"> Bijou </a></li>
-          <li><a class="dropdown-item" href="#"> Acc. Pelo </a></li>
-          </ul>
-      </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active"><a class="nav-link" href="../html/cart.html" target="_blank"> <img src="https://www.flaticon.es/svg/static/icons/svg/626/626394.svg" alt="Carrito" width="30" height="30" style="filter: invert(100%)"> </a></li>
-      <li class="nav-item active"><a class="nav-link" href="../html/userProfile.html" target="_blank"> <img src="https://www.flaticon.com/svg/static/icons/svg/456/456283.svg" alt="Perfil de usuario" width="30" height="30" style="filter: invert(100%)"> </a></li>
+      <li class="nav-item active"><a class="nav-link" href="../html/cart.html" target="_blank"> <img src="https://www.flaticon.es/svg/static/icons/svg/626/626394.svg" alt="Carrito" width="20" height="20" style="filter: invert(100%)"> </a></li>
+      <li class="nav-item active"><a class="nav-link" href="../html/userProfile.html" target="_blank"> <img src="https://www.flaticon.com/svg/static/icons/svg/456/456283.svg" alt="Perfil de usuario" width="20" height="20" style="filter: invert(100%)"> </a></li>
       <li class="nav-item active" id="logInButton"></li>
       
     </ul>
@@ -155,7 +152,7 @@
           <div class="card border-0 col-md-4">
             <div class="row no-gutters">
               <div class="col-3 col-md-4 d-flex align-items-center justify-content-center">
-                <img src="/img/tshirt.png" class="card-img img-fluid" alt="...">
+                <img src="../img/tshirt.png" class="card-img img-fluid" alt="Prenda">
               </div>
               <div class="col-9 col-md-8">
                 <div class="card-body p-1">
@@ -170,7 +167,7 @@
           <div class="card border-0 col-md-4">
             <div class="row no-gutters">
               <div class="col-3 col-md-4 d-flex align-items-center justify-content-center">
-                <img src="/img/recibo.png" class="card-img img-fluid" alt="...">
+                <img src="../img/recibo.png" class="card-img img-fluid" alt="Ticket">
               </div>
               <div class="col-9 col-md-8">
                 <div class="card-body p-1">
@@ -185,7 +182,7 @@
           <div class="card border-0 col-md-4">
             <div class="row no-gutters">
               <div class="col-3 col-md-4 d-flex align-items-center justify-content-center">
-                <img src="/img/envio.png" class="card-img" alt="...">
+                <img src="../img/envio.png" class="card-img" alt="Camión">
               </div>
               <div class="col-9 col-md-8">
                 <div class="card-body p-1">
@@ -314,52 +311,71 @@
       
     
     <!--FOOTER-->
-<footer class="page-footer font-small special-color-dark pt-4">
+    <footer>
+      <div class="row justify-content-center" id="footer">
+        <div class="col-lg-3  text-center py-1">
+          <h5> Sobre Nostros </h5>
+          <ul class="row-2 list-unstyled py-2">
+              <li>  Compromiso con la moda sostenible  </li>
+              <li>  Trabaja con nosotros </li>
+              <li>  Política de privacidad </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 text-center py-1">
+          <h5> Redes</h5>
+          <div class="py-3">
+            <img src="../img/ins1.png" alt="Logo Instagram" height="30" style="margin:0px 2px">
+            <img src="../img/f1.png" alt="Logo Facebook" height="30" style="margin:0px 2px">
+            <img src="../img/yt1.png" alt="Logo YouTube" height="30" style="margin:0px 2px">
+            <img src="../img/tw1.png" alt="Logo Twitter" height="30" style="margin:0px 2px">
+          </div>
+        </div>
+        <div class="col-lg-3 text-center py-1">
+          <h5> Medios de pago aceptados </h5>
+          <div class="py-3">
+            <img src="../img/sy1.png" alt="Logo Instagram" height="40"style="margin:0px 2px">
+            <img src="../img/mo1.png" alt="Logo Facebook" height="40" style="margin:0px 2px">
+            <img src="../img/mas1.png" alt="Logo YouTube" height="40" style="margin:0px 2px">
+          </div>
+        </div>
+        <div class="col-lg-3  text-center py-1">
+          <h5> FAQ </h5>
+         <ul class="row-2 list-unstyled py-2">
+             <li> Política de privacidad </li>
+             <li>  Envíos  </li>
+             <li>  Devoluciones   </li>
+         </ul>
+       </div>
+      </div>
+      <div class="row justify-content-center">
+        <img src="../img/bohemian-grisazulado.png" alt="Bohemian" height="50">
+      </div>
+        <div class="row justify-content-center m-5">
+          <h5> Suscríbete </h5>
+          <form action="suscription">
+            <label for="email"></label>
+            <input type="text" placeholder="Email" id="inpsuscription" style="caret-color: #446084;">
+            <button type="submit" id="btnsuscription"><i class="fa fa-save"></i></button>
+          </form>
+        </div>
+      <div class="row justify-content-center">
+        <div class="col-3 text-center"> 
+          <p> Circuito Moda Sostenible Argentina:
+         <a href="https://amsoar.com.ar/circuito/" target="_blank"><img src="https://amsoar.com.ar/wp-content/uploads/2019/02/AMSOAR_2019_N.png" alt="" height="30"></a> </p>
+        </div>
+        <div class="col-3 text-center"> 
+                 © 2020 Copyright:        <a href="https://github.com/Knifucrab/Grupo-5-Comision-5i-Proyecto-JS" target="_blank" style="text-decoration: none; color:#ffffff" >Grupo 5 RCS </a> 
+                </div>
+        <div class="col-3 text-center">
+          <p>Créditos de las imágenes:
+          <a href="https://unsplash.com/" target="_blank"><img src="https://cdn-images-1.medium.com/max/2600/1*vQ5EsgnJkANWb5fktHPwnw.jpeg" alt="Unsplasah" height="30"></a>
+          <a href="https://www.flaticon.com/" target="_blank"><img src="https://image.flaticon.com/icons/png/512/64/64186.png" alt="Freepick" height="30"></a> </p>
+        </div>
 
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fab fa-facebook-f"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fab fa-twitter"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-1">
-          <i class="fab fa-google-plus-g"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fab fa-linkedin-in"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fab fa-dribbble"> </i>
-        </a>
-      </li>
-    </ul>
-    <!-- Social buttons -->
-
-  </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="">Grupo 5 RCS </a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
+      </div>
+      <!-- Copyright -->
+    
+    </footer>
 
     
     <!-- Optional JavaScript -->
