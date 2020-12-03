@@ -180,3 +180,14 @@ font-family: 'Pacifico', cursive;
     opacity: 1;
 }
 
+/*Footer*/
+footer{
+   background-color: rgb(85, 85, 85);
+   color: #b7c0cb;
+}
+#footer{
+    padding-top:40px
+}
+#suscription{
+
+}
