@@ -180,3 +180,10 @@ font-family: 'Pacifico', cursive;
     opacity: 1;
 }
 
+.modal-product-img {
+    max-width: 100%;
+}
+
+.modal-info {
+   
+}

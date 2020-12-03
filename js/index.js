@@ -32,25 +32,26 @@ $(".img-fluid").addClass("wow fadeIn z-depth-1-half");
 const getModal = (product) => {
   return `
   <!-- Modal -->
-  <div class="modal fade" id="modal${product.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modal${product.id}">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-body d-flex row p-0">
+         <div class="col-6">
+           <img src="${product.image}" alt="" class="modal-product-img">
+         </div>
+         <div class="col-6 p-3 pt-4">
+           <h3>${product.name}</h3>
+           <h2>$ ${product.price}</h2>
+         </div>
+       </div>
+       <div class="modal-footer p-2 pt-0">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+         <button type="button" class="btn btn-primary">Guardar en el carrito</button>
+       </div>
+     </div>
+   </div>
+ </div>
 
             
       `;
@@ -68,11 +69,11 @@ function displayGridProducts() {
             <img src="${product.image}" class="img-fluid productImage" alt="image1">
             <div class="ovrly"></div>
               <div class="buttons">
-              ${getModal(product)}
-                <a href="#productModal" class="fa fa-info" data-toggle="modal" data-target="#modal${product.id}"></a>
-                <a href="#" class="fa fa-shopping-cart"></a>
+              <a href="#productModal" class="fa fa-info" data-toggle="modal" data-target="#modal${product.id}"></a>
+              <a href="#" class="fa fa-shopping-cart"></a>
               </div>
-          </div>
+              </div>
+              ${getModal(product)}
         </div>
       `
       almacenator.push(tbodyContent)
@@ -82,30 +83,6 @@ function displayGridProducts() {
 
 displayGridProducts()
 
-// const getModal = (product) => {
-//   return `
-//   <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-//   <div class="modal-dialog" role="document">
-//     <div class="modal-content">
-//       <div class="modal-header">
-//         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-//           <span aria-hidden="true">&times;</span>
-//         </button>
-//       </div>
-//       <div class="modal-body">
-        
-//       </div>
-//       <div class="modal-footer">
-//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-//         <button type="button" class="btn btn-primary">Añadir al carrito</button>
-//       </div>
-//     </div>
-//   </div>
-// </div>
-//       `;
-
-// }
 
 /*CAROUSEL*/
 $('.carousel').carousel({
