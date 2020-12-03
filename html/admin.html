@@ -75,6 +75,7 @@
                 <th scope="col" class="text-center">Producto</th>
                 <th scope="col" class="text-center">Imagen</th>
                 <th scope="col" class="text-center">Precio</th>
+                <th scope="col" class="text-center">Descripcion</th>
                 <th scope="col" class="text-center">ID</th>
                 <th scope="col" class="text-center">Administrar</th>
               </tr>
@@ -124,12 +125,16 @@
                   required>
               </div>
               <div class="form-group">
-                <label for="productPrice" placeholder="Precio">Precio</label>
-                <input type="number" class="form-control" id="addProductPrice" min="1" max="100000" required>
+                <label for="productPrice">Precio</label>
+                <input type="number" placeholder="Precio" class="form-control" id="addProductPrice" min="1" max="100000" required>
+              </div>
+              <div class="form-group">
+                <label for="productDescription">Descripcion</label>
+                <input type="text"  placeholder="Descripcion del producto" class="form-control" id="addProductDescription" min="1" max="100000" required>
               </div>
               <div class="form-group">
                 <label for="productImage">Ingrese URL de imagen del producto</label>
-                <input type="url" class="form-control" id="addImageBtn" required>
+                <input type="url" placeholder="URL" class="form-control" id="addImageBtn" required>
               </div>
             </form>
           </div>

@@ -37,12 +37,13 @@ const getModal = (product) => {
    <div class="modal-dialog modal-lg">
      <div class="modal-content">
        <div class="modal-body d-flex row p-0">
-         <div class="col-6">
-           <img src="${product.image}" alt="" class="modal-product-img">
+         <div class="col-6 d-flex align-items-center">
+           <img src="${product.image}" alt="" class="w-100">
          </div>
          <div class="col-6 p-3 pt-4">
-           <h3>${product.name}</h3>
+           <h3 class="modal-product-title">${product.name}</h3>
            <h2>$ ${product.price}</h2>
+           <p class="modal-product-description p-3">${product.description}</p>
          </div>
        </div>
        <div class="modal-footer p-2 pt-0">

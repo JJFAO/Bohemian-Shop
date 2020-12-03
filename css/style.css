@@ -32,6 +32,20 @@ h1,h2,h3,h4,h5,h6{
 font-family: 'Pacifico', cursive; 
 }
 
+/* body fix */
+body {
+    overflow-x: hidden;
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+  }
+  html {
+    overflow-x: hidden;
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+  }
+
 /*SECTION*/
 .hovereffect {
   width:100%;
@@ -198,8 +212,23 @@ font-family: 'Pacifico', cursive;
     opacity: 1;
 }
 
-.modal-product-img {
-    max-width: 100%;
+/* Modal product */
+
+.modal-product-title{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.modal-product-description {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+
+@media only screen and (max-width: 990px) {
+    .modal-product-description {
+        display: none;
+    }
 }
    
 /*Footer*/
@@ -226,3 +255,4 @@ footer{
     color:#ffffff;
     margin:0px 10px
 }
+
