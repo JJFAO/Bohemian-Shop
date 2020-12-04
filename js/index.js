@@ -5,11 +5,10 @@ const logInButton = document.getElementById('logInButton')
 
 function detectLogedUser() {
   const logedUser = JSON.parse(localStorage.getItem('logedUser'))
-  console.log(logedUser);
 
-  if (Array.isArray(logedUser)) {
+  if (logedUser) {
     logInButton.innerHTML = `
-      <a class="nav-link" href="../html/userProfile.html" target="_blank">${logedUser[0][0].username}</a>
+      <a class="nav-link" href="../html/userProfile.html" target="_blank">${logedUser.username}</a>
       `
   } else {
     logInButton.innerHTML = `
