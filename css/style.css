@@ -32,6 +32,19 @@ h1,h2,h3,h4,h5,h6{
 font-family: 'Pacifico', cursive; 
 }
 
+/*ANTERIORES*/
+@media (max-width: 990px) {
+    .over-big {
+      display: none;
+    }
+  }
+@media (min-width: 991px) {
+    .over-small {
+      display: none;
+    }
+  }
+  
+
 /*SECTION*/
 .hovereffect {
   width:100%;
