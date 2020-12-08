@@ -8,7 +8,15 @@ function detectLogedUser() {
 
   if (logedUser) {
     logInButton.innerHTML = `
-      <a class="nav-link" href="../html/userProfile.html" target="_blank">${logedUser.username}</a>
+        <a class="nav-link dropdown-toggle" href="#" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        ${logedUser.username}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropDown">
+          <a class="dropdown-item" href="../html/userProfile.html" target="_blank">Mi perfil</a>
+          <a class="dropdown-item" onclick='cerrarSesion()'>Cerrar sesión</a>
+        </div>
+
+
       `
   } else {
     logInButton.innerHTML = `
@@ -18,6 +26,12 @@ function detectLogedUser() {
 }
 
 detectLogedUser()
+
+// Funcion cerrar sesion
+function cerrarSesion() {
+  localStorage.removeItem('logedUser')
+  window.location.reload()
+}
 
 /*NAVABAR EFFECT */
 $(function () {
