@@ -25,49 +25,49 @@
 </head>
 
 <body>
+  <main class="text-center">
   <!--Logo-->
-  <div id="logo"  class="d-flex justify-content-center">
-    <img   src="../img/bohemian_white.png" alt="Logo bohemian" width="50%"><!--a class="link" href="../html/index.html"></a-->
+  <div id="logo"  class="d-inline-block">
+    <a href="../html/index.html"><img   src="../img/bohemian_white.png" alt="Logo bohemian" width="50%"></a><!--a class="link" href="../html/index.html"></a-->
     <!--img src="../img/bohemian_white.png" alt="Logo bohemian" width="50%" onClick="window.location.href = '../html/index.html'" -->
   </div>
 
   <!-- Form login -->
-  <div class="row d-flex justify-content-center">
-    <div>
-      <div id="loginArea" class="p-5 container rounded col-xl-6 col-lg-9 col-md-12 col-sm-12 col-12">
-        <h3 class="text-center pb-4">Iniciar sesión</h3>
-        <form id="loginForm" class="w-100">
-          <div class="form-group">
-            <label for="username">Nombre de usuario</label>
-            <input type="text" required id="usernameInput" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="password">Contraseña</label>
-            <input type="password" required id="passwordInput" class="form-control">
-          </div>
-            <div id="loginError">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div>
+        <div id="loginArea" class="p-5 container rounded col-xl-6 col-lg-9 col-md-12 col-sm-12 col-12">
+          <h3 class="text-center pb-4">Iniciar sesión</h3>
+          <form id="loginForm" class="w-100">
+            <div class="form-group">
+              <label for="username">Nombre de usuario</label>
+              <input type="text" required id="usernameInput" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input type="password" required id="passwordInput" class="form-control">
+            </div>
+              <div id="loginError">
+                
+              </div>
+            <div class="btn-toolbar justify-content-end">
+              <div class="btn-group mr-2">
+                <button type="submit" class="btn btn-log">Ingresar</button>
+              </div>
+              <div class="btn-group mr-2">
+                <button type="button" class="btn btn-log" data-toggle="modal"
+                  data-target="#registerModal">Registrarse</button>
+              </div>
               
             </div>
-          <div class="btn-toolbar justify-content-end">
-            <div class="btn-group mr-2">
-              <button type="submit" class="btn btn-log">Ingresar</button>
-            </div>
-            <div class="btn-group mr-2">
-              <button type="button" class="btn btn-log" data-toggle="modal"
-                data-target="#registerModal">Registrarse</button>
-            </div>
-            
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!--Boton volver-->
-  <div class="d-flex justify-content-center p-5">
-    <button type="button" class="btn  btn-log"> <a href="../html/index.html" style="text-decoration:none; color: #ffffff;">Volver al inicio</a></button>
   </div>
-  
+</main>
+
 
   <!-- Register Modal -->
   <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="register-modal"
@@ -104,8 +104,9 @@
     </div>
   </div>
 
+
   <!--Footer-->
-  <footer>
+  <footer class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-3 text-center"> 
       <p> Circuito Moda Sostenible Argentina:

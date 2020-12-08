@@ -4,6 +4,8 @@ body{
         background-size: 100vw 100vh, 100vw 100vh;
         display: flex;
         flex-direction: column;
+        min-height: 100vw;
+        max-height: 100vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -16,12 +18,15 @@ body{
         flex-direction: column;
     }
 }
-  
+
+main{
+    padding-top: 10vh;
+}
+
 #loginArea{
 background-color: #55555579;
 color: #FFFFFF;
 width: 60vw;
-margin-top: 30vh;
 }
 
 .btn-log{
@@ -46,14 +51,12 @@ margin-top: 30vh;
 font-family: 'Lato', sans-serif;s
 }
 
-#logo{
-    margin-top: 10vh;
-    margin-bottom:-20vh;
-}
 
 footer{
     background-color: rgba(85, 85, 85, 0.445);
     color: #ffffff;
-    margin-top: auto;
-    
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
  }
