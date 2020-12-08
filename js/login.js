@@ -9,7 +9,7 @@ const newEmail = document.getElementById('newEmail');
 const newBirthdate = document.getElementById('newBirthdate');
 const loginError = document.getElementById('loginError');
 // cuenta admin
-const adminAccount = [{
+const admin = [{
     username: 'admin',
     password: 'admin123'
 }]
@@ -47,9 +47,12 @@ loginForm.onsubmit = (e) => {
     const username = usernameInput.value
     const password = passwordInput.value
     const userFound = users.find(user => user.username === username && user.password === password)
+    const adminFound = admin.find(admin => admin.username === username && admin.password === password)
 
-    if (adminAccount.find(admin => admin.username === username && admin.password === password)) {
+    if (adminFound) {
         window.location.href = 'admin.html';
+        logedAdmin = adminFound
+        localStorage.setItem('logedAdmin', JSON.stringify(logedAdmin))
 
     } else if (userFound) {
         window.location.href = 'index.html';

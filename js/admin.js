@@ -8,6 +8,34 @@ const editedName = document.getElementById('editedName')
 const editedPrice = document.getElementById('editedPrice')
 const editedImage = document.getElementById('editedImage')
 const editProductForm = document.getElementById('editProductForm')
+const logInButton = document.getElementById('logInButton')
+
+
+
+function detectLogedUser() {
+    const logedAdmin = JSON.parse(localStorage.getItem('logedAdmin'))
+    console.log(logedAdmin);
+    if (logedAdmin) {
+      logInButton.innerHTML = `
+          <a class="nav-link dropdown-toggle" href="#" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ${logedAdmin.username}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropDown">
+            <a class="dropdown-item" onclick='cerrarSesion()'>Cerrar sesión</a>
+          </div>
+        `
+    } else {
+        window.location.href = '../html/index.html'
+    }
+  }
+
+  detectLogedUser()
+
+  // Funcion cerrar sesion
+function cerrarSesion() {
+    localStorage.removeItem('logedAdmin')
+    window.location.reload()
+  }
 
 const generateId = function () {
     return '_' + Math.random().toString(36).substr(2, 9);
@@ -50,9 +78,8 @@ function displayProducts(products) {
                 <img src="${product.image}"alt="Sin imagen" class="product-image">
                 </div>
                 </td>
-                <td>${product.price}</td>
+                <td> ${product.price}</td>
                 <td>${product.description}</td>
-                <td>${product.id}</td>
                 <td>
                 <div class="text-center">
                 <div class="p-2">
@@ -141,7 +168,7 @@ editProductForm.onsubmit = (e) => {
         const tbodyContent = `
         <tr>
             <th scope="row">${user.username}</th>
-                    <td>${user.id}</td>
+            <td>${user.email}</td>
                     <td>
                         <div class="text-center">
                             <div class="p-2">
