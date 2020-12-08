@@ -211,6 +211,25 @@ font-family: 'Pacifico', cursive;
     opacity: 1;
 }
 
+/* Modal product */
+
+.modal-product-title{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.modal-product-description {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+
+@media only screen and (max-width: 990px) {
+    .modal-product-description {
+        display: none;
+    }
+}
+   
 /*Footer*/
 footer{
    background-color: rgb(85, 85, 85);

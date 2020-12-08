@@ -8,9 +8,9 @@ function displayProfileCard() {
         const cardContent = `
         <div class="card profile-card">
                           <img src="/img/user-profile-default.png" alt="John" class="w-100 rounded-circle">
-                          <h1>${logedUser[0][0].username}</h1>
-                          <p class="title">${logedUser[0][0].email}</p>
-                          <p>${logedUser[0][0].birthdate}</p>
+                          <h1>${logedUser.username}</h1>
+                          <p class="title">${logedUser.email}</p>
+                          <p>${logedUser.birthdate}</p>
                         </div>
         `
         almacenator.push(cardContent)
@@ -24,6 +24,7 @@ displayProfileCard()
 
 function displayUserInfo() {
     const logedUser = JSON.parse(localStorage.getItem('logedUser'))
+    console.log(logedUser);
     const almacenator = []
         const tableContent = `
         <div class="row">
@@ -39,12 +40,12 @@ function displayUserInfo() {
           <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
             <ul class="list-group list-group-flush border">
-            <li class="list-group-item">${logedUser[0][0].username}</li>
+            <li class="list-group-item">${logedUser.username}</li>
             </ul>
             </div>
             <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
             <ul class="list-group list-group-flush border">
-            <li class="list-group-item">${logedUser[0][0].email}</li>
+            <li class="list-group-item">${logedUser.email}</li>
             </ul>
             </div>
             <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
@@ -56,7 +57,7 @@ function displayUserInfo() {
             <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
             <ul class="list-group list-group-flush border">
             <li class="list-group-item">
-            ${logedUser[0][0].birthdate}</div></li>
+            ${logedUser.birthdate}</div></li>
             </ul>
           </div>
         </div>

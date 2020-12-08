@@ -1,5 +1,6 @@
 const newProduct = document.getElementById('addProductName')
 const newPrice = document.getElementById('addProductPrice')
+const newDescription = document.getElementById('addProductDescription')
 const addImageBtn = document.getElementById('addImageBtn')
 const newProductForm = document.getElementById('newProductForm')
 const productTable = document.getElementById('productTable')
@@ -20,11 +21,13 @@ newProductForm.onsubmit = (e) => {
     const name = newProduct.value;
     const price = newPrice.value;
     const image = addImageBtn.value;
+    const description = newDescription.value;
 
     products.push({
         name,
         price,
         image,
+        description,
         id: generateId(),
         createdAt: Date.now()
     })
@@ -48,6 +51,7 @@ function displayProducts(products) {
                 </div>
                 </td>
                 <td>${product.price}</td>
+                <td>${product.description}</td>
                 <td>${product.id}</td>
                 <td>
                 <div class="text-center">
