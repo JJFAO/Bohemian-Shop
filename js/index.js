@@ -2,6 +2,9 @@
 const gridRow = document.getElementById('gridRow')
 const logInButton = document.getElementById('logInButton')
 
+const formSub = document.getElementById('formSub');
+const emailSub = document.getElementById('emailSub');
+
 
 function detectLogedUser() {
   const logedUser = JSON.parse(localStorage.getItem('logedUser'))
@@ -61,7 +64,7 @@ const getModal = (product) => {
        </div>
        <div class="modal-footer p-2 pt-0">
          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-         <button type="button" class="btn btn-primary">Guardar en el carrito</button>
+         <!--button type="button" class="btn btn-primary add-cart">Guardar en el carrito</button-->
        </div>
      </div>
    </div>
@@ -84,7 +87,7 @@ function displayGridProducts() {
             <div class="ovrly"></div>
               <div class="buttons">
               <a href="#productModal" class="fa fa-info" data-toggle="modal" data-target="#modal${product.id}"></a>
-              <a href="#" class="fa fa-shopping-cart"></a>
+              <a href="#" class="fa fa-shopping-cart add-cart"></a>
               </div>
               </div>
               ${getModal(product)}
@@ -103,4 +106,24 @@ $('.carousel').carousel({
   interval: 2000
 })
 
+/*SUSCRIPTORES*/
+function addSub(){
+
+}
+formSub.onsubmit = (e) => {
+  e.preventDefault();
+  const subs = JSON.parse(localStorage.getItem('subs')) || [];
+  const mail = document.getElementById('emailSub').value;
+  
+  subs.push({
+      mail: mail,
+  })
+
+  const subsJson = JSON.stringify(subs);
+  localStorage.setItem('subs', subsJson);
+
+  console.log("formUser.onsubmit -> subs", subs);
+
+  formSub.reset();
+}
 

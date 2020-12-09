@@ -50,14 +50,15 @@ newProductForm.onsubmit = (e) => {
     const price = newPrice.value;
     const image = addImageBtn.value;
     const description = newDescription.value;
-
+    let inCart = 0
     products.push({
         name,
         price,
         image,
         description,
         id: generateId(),
-        createdAt: Date.now()
+        createdAt: Date.now(),
+        inCart
     })
 
     localStorage.setItem('products', JSON.stringify(products))
@@ -185,3 +186,22 @@ editProductForm.onsubmit = (e) => {
 }
 
 displayUsers()
+
+function displaySubs() {
+  const subscriptors = JSON.parse(localStorage.getItem('subs')) || [];
+  const list = []
+  subscriptors.id
+  for (let i = 0; i < subscriptors.length; i++) {
+      const subs = subscriptors[i];
+      const tbodyContent = `
+      <tr>          
+          <td>${subs.mail}</td>
+          </th>
+      </tr>
+      `
+      list.push(tbodyContent)
+  }
+  subsTable.innerHTML = list.join('')
+}
+
+displaySubs()
