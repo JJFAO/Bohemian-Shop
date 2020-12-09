@@ -14,7 +14,6 @@ const logInButton = document.getElementById('logInButton')
 
 function detectLogedUser() {
     const logedAdmin = JSON.parse(localStorage.getItem('logedAdmin'))
-    console.log(logedAdmin);
     if (logedAdmin) {
       logInButton.innerHTML = `
           <a class="nav-link dropdown-toggle" href="#" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
