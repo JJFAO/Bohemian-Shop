@@ -134,7 +134,6 @@ const products = JSON.parse(localStorage.getItem('products'));
 //const productTable = document.getElementById('productTable')
 
 for (let i = 0; i < carts.length; i++) {
-  console.log(carts);
   carts[i].addEventListener('click',() => {
     cartNumbers(products[i])
   })
