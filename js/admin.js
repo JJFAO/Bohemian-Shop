@@ -14,7 +14,6 @@ const logInButton = document.getElementById('logInButton')
 
 function detectLogedUser() {
     const logedAdmin = JSON.parse(localStorage.getItem('logedAdmin'))
-    console.log(logedAdmin);
     if (logedAdmin) {
       logInButton.innerHTML = `
           <a class="nav-link dropdown-toggle" href="#" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,7 +49,6 @@ newProductForm.onsubmit = (e) => {
     const price = newPrice.value;
     const image = addImageBtn.value;
     const description = newDescription.value;
-    let inCart = 0
     products.push({
         name,
         price,
@@ -58,7 +56,6 @@ newProductForm.onsubmit = (e) => {
         description,
         id: generateId(),
         createdAt: Date.now(),
-        inCart
     })
 
     localStorage.setItem('products', JSON.stringify(products))
@@ -67,7 +64,6 @@ newProductForm.onsubmit = (e) => {
 }
 
 function displayProducts(products) {
-
     const almacenator = []
     for (let i = 0; i < products.length; i++) {
         const product = products[i];
