@@ -183,8 +183,8 @@
 }
 
 /*Media Queries*/
-@media screen and (min-width: 980px){
-    .hero { width: 980px; }    
+/* @media screen and (min-width: 980px){
+    .hero { width: 50%; }    
 }
 @media screen and (max-width: 640px){
     .hero h1 { font-size: 4em; }    
@@ -200,7 +200,7 @@
 
 .second-carousel-caption h5:hover, p:hover {
     color: paleturquoise
-}
+} */
 
 
 
@@ -208,6 +208,16 @@
 @media only screen and (max-width: 1200px) {
     .second-carousel-caption{
         bottom: 0%;
+    }
+    .second-carousel-caption p {
+        display: none;
+    }
+    .second-indicators{
+        display:none;
+
+    }
+    .hero{
+        top: -30px;
     }
   }
   @media only screen and (max-width: 700px) {
@@ -222,9 +232,16 @@
         display: none;
     }
 
-    .carousel-btn {
-        font-size: 80%;
-        width: 60%;
+    .btn-hero {
+        font-size: 60%;
+        width: 40%;
+    }
+    .second-indicators{
+        display:none;
+
+    }
+    .hero{
+        top: -30px;
     }
 }
 @media only screen and (max-width: 400px) {
@@ -239,9 +256,12 @@
             display: none;
         }
 
-        .carousel-btn{
+        .btn-hero{
             font-size: 60%;
-            width: 50%;
+            width: 30%;
+        }
+        .hero{
+            top: 0;
         }
 }
 
@@ -260,5 +280,8 @@
     .carousel-btn{
         font-size: 60%;
         width: 50%;
+    }
+    .hero{
+        top: 0;
     }
 }
