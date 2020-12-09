@@ -21,7 +21,7 @@ detectLogedUser()*/
 
 let carts = document.querySelectorAll('.add-cart');
 const products = JSON.parse(localStorage.getItem('products'));
-const productTable = document.getElementById('productTable')
+//const productTable = document.getElementById('productTable')
 
 for (let i = 0; i < carts.length; i++) {
   console.log(carts);
@@ -91,17 +91,40 @@ function totalCost(product) {
     }
 }
 
+//Para sacar la "longitud" del objeto
+var cartSize = function(obj) {
+  var count = 0;
+  
+  if (typeof obj == "object") {
+  
+      if (Object.keys) {
+          count = Object.keys(obj).length;
+      } else if (window._) {
+          count = _.keys(obj).length;
+      } else if (window.$) {
+          count = $.map(obj, function() { return 1; }).length;
+      } else {
+          for (var key in obj) if (obj.hasOwnProperty(key)) count++;
+      }
+      
+  }
+  
+  return count;
+};
+
+
+
 function displayCart(products) {
 
   const shoppingcart = []
-  for (let i = 0; i < products.length; i++) {
+  for (let i = 0; i < cartSize(products); i++) {
       const product = products[i];
       const tbodyContent = `
       <tr>
           <th scope="row">${product.name}</th>
               <td>
               <div class="text-center"">
-              <img src="${product.image}"alt="Sin imagen" class="product-image">
+              <img src="${product.image}"alt="Sin imagen" class="product-image" width="50px">
               </div>
               </td>
               <td> ${product.price}</td>
@@ -113,18 +136,17 @@ function displayCart(products) {
       shoppingcart.push(tbodyContent)
       console.log(tbodyContent)
   }
-
-
-
   productTable.innerHTML = shoppingcart.join(',')
 }
 
-function displayAllCart() {
-  displayCart(JSON.parse(localStorage.getItem('productsInCart')) || []);
+
+function displayAllCart(c) {
+  displayCart(c);
   
 }
 
-console.log(JSON.parse(localStorage.getItem('productsInCart')))
-displayCart()
+displayCart(products)
+
+
 
 onLoadCartNumbers()
