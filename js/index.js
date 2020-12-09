@@ -64,7 +64,7 @@ const getModal = (product) => {
        </div>
        <div class="modal-footer p-2 pt-0">
          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-         <!--button type="button" class="btn btn-primary add-cart">Guardar en el carrito</button-->
+         <button type="button" class="btn btn-primary add-cart">Guardar en el carrito</button>
        </div>
      </div>
    </div>
@@ -126,3 +126,43 @@ formSub.onsubmit = (e) => {
 
   formSub.reset();
 }
+
+
+//----- Para los numeros en el carrito porque quedan lindos
+let carts = document.querySelectorAll('.add-cart');
+const products = JSON.parse(localStorage.getItem('products'));
+//const productTable = document.getElementById('productTable')
+
+for (let i = 0; i < carts.length; i++) {
+  console.log(carts);
+  carts[i].addEventListener('click',() => {
+    cartNumbers(products[i])
+  })
+}
+
+function onLoadCartNumbers(){
+  let cartQuant = localStorage.getItem('cartNumbers');
+  if (cartQuant){
+    document.querySelector('.cart span').textContent = cartQuant
+  }
+}
+
+
+function cartNumbers() {
+
+  let cartQuant = parseInt( localStorage.getItem('cartNumbers'));
+
+  if (cartQuant){
+
+    localStorage.setItem('cartNumbers',cartQuant + 1);
+    document.querySelector('.cart span').textContent = cartQuant + 1
+  }else{
+    localStorage.setItem('cartNumbers', 1);
+    document.querySelector('.cart span').textContent = 1
+  }
+ 
+}
+
+onLoadCartNumbers()
+///
+
