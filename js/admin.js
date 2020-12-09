@@ -67,7 +67,6 @@ newProductForm.onsubmit = (e) => {
 }
 
 function displayProducts(products) {
-
     const almacenator = []
     for (let i = 0; i < products.length; i++) {
         const product = products[i];
