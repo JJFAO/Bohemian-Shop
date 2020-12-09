@@ -2,7 +2,7 @@ const gridRow = document.getElementById('gridRow')
 const logInButton = document.getElementById('logInButton')
 
 
-function LogedUser() {
+function detectLogedUser() {
   const logedUser = JSON.parse(localStorage.getItem('logedUser'));
   console.log(logedUser);
 
@@ -21,7 +21,7 @@ detectLogedUser()
 
 function detectCartNumber() {
   let  cartQuant = JSON.parse(localStorage.getItem('cartNumbers'));
-  console.log(logedUser);
+  console.log(cartQuant);
 
   if (cartQuant){
     document.querySelector('.cart span').textContent = cartQuant
