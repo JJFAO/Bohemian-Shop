@@ -1,7 +1,7 @@
 // Variables
 const gridRow = document.getElementById('gridRow')
 const logInButton = document.getElementById('logInButton')
-
+const productTable = document.getElementById('productTable')
 const formSub = document.getElementById('formSub');
 const emailSub = document.getElementById('emailSub');
 
@@ -126,4 +126,3 @@ formSub.onsubmit = (e) => {
 
   formSub.reset();
 }
-
