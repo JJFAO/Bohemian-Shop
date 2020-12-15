@@ -1,8 +1,8 @@
-.first-carousel-caption{
+.first-first-carousel-caption{
     bottom: 40%;
 }
 
-.first-carousel-caption h5{
+.first-first-carousel-caption h5{
     font-size: 35px;
     letter-spacing: 1px;
 }
@@ -47,24 +47,24 @@
 
 /* Media querys */
 @media only screen and (max-width: 1200px) {
-    .carousel-caption{
+    .first-carousel-caption{
         bottom: 30%;
     }
   }
   @media only screen and (max-width: 960px) {
-    .carousel-caption{
+    .first-carousel-caption{
         bottom: 15%;
     }
   }
   @media only screen and (max-width: 700px) {
-      .carousel-caption {
+      .first-carousel-caption {
         bottom: 30%;
       }
-    .carousel-caption h5{
+    .first-carousel-caption h2{
         font-size: 20px;
     }
     
-    .carousel-caption p {
+    .first-carousel-caption p {
         display: none;
     }
 
@@ -74,14 +74,14 @@
     }
 }
     @media only screen and (max-width: 400px) {
-        .carousel-caption {
-            bottom: 20%;
+        .first-first-carousel-caption{
+            bottom: 100%;
         }
-        .carousel-caption h5{
-            font-size: 15px;
+        .first-carousel-caption h2{
+            font-size: 25px;
         }
     
-        .carousel-caption p {
+        .first-carousel-caption p {
             display: none;
         }
 
@@ -111,7 +111,7 @@
               transform: translate3d(-50%,-50%,0);
 }
 .hero h1 {
-    font-size: 6em;    
+    font-size: 4em;    
     font-weight: bold;
     margin: 0;
     padding: 0;
@@ -198,6 +198,9 @@
     .hero{
         top: -300px;
     }
+    .hero hgroup h5 {
+        font-size: 40px;
+    }
   }
 
   @media only screen and (max-width: 1500px) {
@@ -228,12 +231,15 @@
 
     }
     .hero{
-        top: -30px;
+        top: -115px;
+    }
+    .hero hgroup h5 {
+        font-size: 30px;
     }
   }
   @media only screen and (max-width: 700px) {
       .second-carousel-caption {
-        bottom: 30%;
+        bottom: 10%;
       }
     .second-carousel-caption h5{
         font-size: 20px;
@@ -254,26 +260,9 @@
     .hero{
         top: -30px;
     }
-}
-@media only screen and (max-width: 400px) {
-        .carousel-caption {
-            bottom: 20%;
-        }
-        .second-carousel-caption h5{
-            font-size: 15px;
-        }
-    
-        .second-carousel-caption p {
-            display: none;
-        }
-
-        .btn-hero{
-            font-size: 60%;
-            width: 30%;
-        }
-        .hero{
-            top: 0;
-        }
+    .hero hgroup h5 {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -294,5 +283,8 @@
     }
     .hero{
         top: 0;
+    }
+    .btn-hero {
+        display: none;
     }
 }
