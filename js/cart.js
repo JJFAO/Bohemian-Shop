@@ -4,22 +4,34 @@ const logInButton = document.getElementById('logInButton')
 
 
 function detectLogedUser() {
-  const logedUser = JSON.parse(localStorage.getItem('logedUser'));
-  console.log(logedUser);
+  const logedUser = JSON.parse(localStorage.getItem('logedUser'))
 
-  if (Array.isArray(logedUser)) {
+  if (logedUser) {
     logInButton.innerHTML = `
-      <a class="nav-link" href="../docs/userProfile.html" target="_blank">${logedUser[0][0].username}</a>
+        <a class="nav-link dropdown-toggle" href="#" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        ${logedUser.username}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropDown">
+          <a class="dropdown-item" href="../docs/userProfile.html">Mi perfil</a>
+          <a class="dropdown-item" onclick='cerrarSesion()'>Cerrar sesión</a>
+        </div>
+
+
       `
   } else {
     logInButton.innerHTML = `
-    <a class="nav-link" href="../docs/login.html" target="_blank"> Log In </a>
+    <a class="nav-link" href="../docs/login.html"> Log In </a>
     `
   }
 }
 
 detectLogedUser()
 
+// Funcion cerrar sesion
+function cerrarSesion() {
+  localStorage.removeItem('logedUser')
+  window.location.reload()
+}
 
 //DISPLAY CART
 

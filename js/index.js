@@ -16,7 +16,7 @@ function detectLogedUser() {
         ${logedUser.username}
         </a>
         <div class="dropdown-menu" aria-labelledby="dropDown">
-          <a class="dropdown-item" href="../docs/userProfile.html" target="_blank">Mi perfil</a>
+          <a class="dropdown-item" href="../docs/userProfile.html">Mi perfil</a>
           <a class="dropdown-item" onclick='cerrarSesion()'>Cerrar sesión</a>
         </div>
 
@@ -24,7 +24,7 @@ function detectLogedUser() {
       `
   } else {
     logInButton.innerHTML = `
-    <a class="nav-link" href="../docs/login.html" target="_blank"> Log In </a>
+    <a class="nav-link" href="../docs/login.html"> Log In </a>
     `
   }
 }

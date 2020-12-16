@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
- 
+
   <!-- Project Css -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/cart.css">
@@ -33,20 +33,23 @@
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top ">
     <div class="container">
       <div id="logo">
-        <a href="../docs/index.html"><img src="../img/bohemian_white.png" class="image_full" height="40"></a>
-        <a href="../docs/index.html"><img src="../img/b_white.png"  class="image_mobile" height="30"></a>
+        <a href="index.html"><img src="../img/bohemian_white.png" class="image_full" height="40"></a>
+        <img src="../img/b_white.png" class="image_mobile" height="30">
       </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="main_nav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active cart"><a class="nav-link" href="../docs/cart.html" target="_blank"> Carrito </a></li>
-      <li class="nav-item active" id="logInButton"></li>
-      
-    </ul>
-    </div> <!-- navbar-collapse.// -->
-  </div><!-- container //  -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active cart"><a class="nav-link" href="../docs/cart.html"> Carrito </a>
+          </li>
+          <li class="nav-item dropdown" id="logInButton">
+
+          </li>
+
+        </ul>
+      </div> <!-- navbar-collapse.// -->
+    </div><!-- container //  -->
   </nav>
   <!--CARRITO-->
   <main>
@@ -56,54 +59,75 @@
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <th scope="col" > <h5>Producto</h5></th>
-            <th scope="col" ><h5>Imagen</h5></th>
-            <th scope="col" ><h5>Cantidad</h5></th>
-            <th scope="col" ><h5>Precio</h5></th>
+            <th scope="col">
+              <h5>Producto</h5>
+            </th>
+            <th scope="col">
+              <h5>Imagen</h5>
+            </th>
+            <th scope="col">
+              <h5>Cantidad</h5>
+            </th>
+            <th scope="col">
+              <h5>Precio</h5>
+            </th>
           </tr>
         </thead>
         <tbody id="cartTable">
 
         </tbody>
         <tr>
-          <th scope="col" ></th>
-          <th scope="col" ></th>
-          <th scope="col" ></th>
-          <th scope="col" ></th>
-          <th scope="col" ><h5>Total</h5></th>
-          <th>$</th> <th scope="col"  id="cost"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col">
+            <h5>Total</h5>
+          </th>
+          <th>$</th>
+          <th scope="col" id="cost"></th>
         </tr>
       </table>
     </div>
     <div>
-      <h4 id="finalizar"> 
+      <h4 id="finalizar">
         Finalizar compra
         <img src="https://www.flaticon.es/svg/static/icons/svg/724/724927.svg" alt="flecha" width=30px>
       </h4>
     </div>
 
-</main>
+  </main>
 
-<!--FOOTER-->
-<footer>
-  <div class="row justify-content-center">
-    <div class="col-3 text-center"> 
-      <p> Circuito Moda Sostenible Argentina:
-     <a href="https://amsoar.com.ar/circuito/" target="_blank"><img src="https://amsoar.com.ar/wp-content/uploads/2019/02/AMSOAR_2019_N.png" alt="" height="30"></a> </p>
-    </div>
-    <div class="col-3 text-center"> 
-             © 2020 Copyright:        <a href="https://github.com/Knifucrab/Grupo-5-Comision-5i-Proyecto-JS" target="_blank" style="text-decoration: none; color:#ffffff" >Grupo 5 RCS </a> 
-            </div>
-    <div class="col-3 text-center">
-      <p>Créditos de las imágenes:
-      <a href="https://unsplash.com/" target="_blank"><img src="https://cdn-images-1.medium.com/max/2600/1*vQ5EsgnJkANWb5fktHPwnw.jpeg" alt="Unsplasah" height="30"></a>
-      <a href="https://www.flaticon.com/" target="_blank"><img src="https://image.flaticon.com/icons/png/512/64/64186.png" alt="Freepick" height="30"></a> </p>
+  <!--FOOTER-->
+  <footer>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-3 text-center">
+          <p> Circuito Moda Sostenible Argentina:
+            <a href="https://amsoar.com.ar/circuito/" target="_blank"><img
+                src="https://amsoar.com.ar/wp-content/uploads/2019/02/AMSOAR_2019_N.png" alt="" height="30"></a>
+          </p>
+        </div>
+        <div class="col-3 text-center">
+          © 2020 Copyright: <a href="https://github.com/Knifucrab/Grupo-5-Comision-5i-Proyecto-JS" target="_blank"
+            style="text-decoration: none; color:#ffffff">Grupo 5 RCS </a>
+        </div>
+        <div class="col-3 text-center">
+          <p>Créditos de las imágenes:
+            <a href="https://unsplash.com/" target="_blank"><img
+                src="https://cdn-images-1.medium.com/max/2600/1*vQ5EsgnJkANWb5fktHPwnw.jpeg" alt="Unsplasah"
+                height="30"></a>
+            <a href="https://www.flaticon.com/" target="_blank"><img
+                src="https://image.flaticon.com/icons/png/512/64/64186.png" alt="Freepick" height="30"></a>
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
 
 
-  
- 
+
+
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -113,10 +137,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
- <!-- Cart js -->
- 
- 
- <script src="../js/cart.js"></script>
+  <!-- Cart js -->
+
+
+  <script src="../js/cart.js"></script>
 
   <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
