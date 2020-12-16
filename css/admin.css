@@ -2,9 +2,11 @@ body {
     overflow: hidden;
 }
 
-a:hover {
+a, a:hover, a:link{
     text-decoration: none;
+    color:#555555 ;
 }
+
 
 #sidebar-container {
     min-height: 100vh;

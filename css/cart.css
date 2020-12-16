@@ -1,0 +1,23 @@
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer{
+  margin-top: auto;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 0px;
+}
+
+td, th, tr, .plus-minus{
+  vertical-align: middle;
+}
+
+#finalizar{
+  display: flex;
+  justify-content: center;
+}
+
