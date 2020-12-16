@@ -117,6 +117,25 @@ function addToCart(p) {
   console.log(products);
 } 
 
+/*NUMERITOS CUQUIS PARA EL CART*/
+function displayCartNumber() {
+
+  let  products = JSON.parse(localStorage.getItem('products'));
+  let cartNumber = 0;
+
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+    let partialCart = parseInt(product.inCart)
+    cartNumber = parseInt(cartNumber) + partialCart  
+    cartNum.innerHTML = cartNumber
+  }
+ }
+ 
+ 
+displayCartNumber()
+
+
+
 
 /*CAROUSEL*/
 $('.carousel').carousel({
