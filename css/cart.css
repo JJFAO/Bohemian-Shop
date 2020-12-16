@@ -16,3 +16,8 @@ td, th, tr, .plus-minus{
   vertical-align: middle;
 }
 
+#finalizar{
+  display: flex;
+  justify-content: center;
+}
+
