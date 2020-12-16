@@ -4,7 +4,8 @@ const logInButton = document.getElementById('logInButton')
 const productTable = document.getElementById('productTable')
 const formSub = document.getElementById('formSub');
 const emailSub = document.getElementById('emailSub');
-
+const addProduct = document.getElementById('addProduct');
+const products = localStorage.getItem('products') ;
 
 function detectLogedUser() {
   const logedUser = JSON.parse(localStorage.getItem('logedUser'))
@@ -15,7 +16,7 @@ function detectLogedUser() {
         ${logedUser.username}
         </a>
         <div class="dropdown-menu" aria-labelledby="dropDown">
-          <a class="dropdown-item" href="../html/userProfile.html" target="_blank">Mi perfil</a>
+          <a class="dropdown-item" href="../docs/userProfile.html" target="_blank">Mi perfil</a>
           <a class="dropdown-item" onclick='cerrarSesion()'>Cerrar sesión</a>
         </div>
 
@@ -23,7 +24,7 @@ function detectLogedUser() {
       `
   } else {
     logInButton.innerHTML = `
-    <a class="nav-link" href="../html/login.html" target="_blank"> Log In </a>
+    <a class="nav-link" href="../docs/login.html" target="_blank"> Log In </a>
     `
   }
 }
@@ -64,7 +65,7 @@ const getModal = (product) => {
        </div>
        <div class="modal-footer p-2 pt-0">
          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-         <button type="button" class="btn btn-primary add-cart">Guardar en el carrito</button>
+         <button type="submit" id="addProduct" class="btn btn-primary add-cart" onClick="addToCart('${product.id}')" >Guardar en el carrito</button>
        </div>
      </div>
    </div>
@@ -87,7 +88,7 @@ function displayGridProducts() {
             <div class="ovrly"></div>
               <div class="buttons">
               <a href="#productModal" class="fa fa-info" data-toggle="modal" data-target="#modal${product.id}"></a>
-              <a href="#" class="fa fa-shopping-cart add-cart"></a>
+              <a href="#" class="fa fa-shopping-cart add-cart" type="submit" id="addProduct" onClick="addToCart('${product.id}')"> </a>
               </div>
               </div>
               ${getModal(product)}
@@ -99,6 +100,22 @@ function displayGridProducts() {
 }
 
 displayGridProducts()
+
+/*ADD TO CART*/
+function addToCart(p) {
+ 
+  const products = JSON.parse(localStorage.getItem('products')) ;
+ 
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+
+    if ( p === product.id) {
+      product.inCart = parseInt(product.inCart) + 1
+    } 
+  }
+  localStorage.setItem('products', JSON.stringify(products));
+  console.log(products);
+} 
 
 
 /*CAROUSEL*/

@@ -49,6 +49,7 @@ newProductForm.onsubmit = (e) => {
     const price = newPrice.value;
     const image = addImageBtn.value;
     const description = newDescription.value;
+    let inCart = 0;
     products.push({
         name,
         price,
@@ -56,6 +57,7 @@ newProductForm.onsubmit = (e) => {
         description,
         id: generateId(),
         createdAt: Date.now(),
+        inCart
     })
 
     localStorage.setItem('products', JSON.stringify(products))
