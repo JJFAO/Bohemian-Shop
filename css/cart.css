@@ -21,3 +21,10 @@ td, th, tr, .plus-minus{
   justify-content: center;
 }
 
+@media only screen and (max-width: 500px){
+#arrow{
+    background-image: url(https://www.flaticon.es/svg/static/icons/svg/591/591855.svg) ;
+    background-repeat: no-repeat; 
+    background-size: 5vw ;
+}
+}

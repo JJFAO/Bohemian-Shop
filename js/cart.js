@@ -35,11 +35,12 @@ function cerrarSesion() {
 
 //DISPLAY CART
 
+
 function displayCart() {
-
+  
   let  products = JSON.parse(localStorage.getItem('products'));
-
   const showCart = []
+  if (products != null) {
   for (let i = 0; i < products.length; i++) {
     let product = products[i];
 
@@ -64,9 +65,10 @@ function displayCart() {
               </td>
       </tr>
       `
-      showCart.push(tbodyContent)
+        showCart.push(tbodyContent)
+      }
+      cartTable.innerHTML = showCart.join('')
     }
-    cartTable.innerHTML = showCart.join('')
   }
  }
  displayCart()
@@ -131,12 +133,15 @@ function displayCartNumber() {
 
   let  products = JSON.parse(localStorage.getItem('products'));
   let cartNumber = 0;
-
-  for (let i = 0; i < products.length; i++) {
-    let product = products[i];
-    let partialCart = parseInt(product.inCart)
-    cartNumber = parseInt(cartNumber) + partialCart  
-    cartNum.innerHTML = cartNumber
+  if (products != null) {
+    for (let i = 0; i < products.length; i++) {
+      let product = products[i];
+      let partialCart = parseInt(product.inCart)
+      cartNumber = parseInt(cartNumber) + partialCart  
+      cartNum.innerHTML = cartNumber
+    }
+  } else {
+      cartNum.innerHTML = '0'
   }
  }
  
