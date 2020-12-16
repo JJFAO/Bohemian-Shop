@@ -47,7 +47,7 @@ function displayCart() {
                 <img src="https://www.flaticon.es/svg/static/icons/svg/1828/1828926.svg" alt="flecha" width=15px>
                 </button> 
               </td>
-              <td class="text-center border-0"> ${product.price}</td>
+              <td class="text-center border-0"> $ ${parseInt(product.price * product.inCart)} </td>
               </td>
               </td>
       </tr>
@@ -58,6 +58,24 @@ function displayCart() {
   }
  }
  displayCart()
+
+ function displayTotal() {
+
+  let  products = JSON.parse(localStorage.getItem('products'));
+  let finalCost = 0;
+
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+    let partialCost = parseInt(product.price * product.inCart)
+    finalCost = parseInt(finalCost) + partialCost  
+    cost.innerHTML = finalCost
+  }
+ }
+ 
+ 
+displayTotal()
+
+
 
  function anotherProduct(p) {
  
@@ -73,6 +91,7 @@ function displayCart() {
   localStorage.setItem('products', JSON.stringify(products));
   console.log(products);
   displayCart()
+  displayTotal()
 } 
 
 
@@ -90,6 +109,7 @@ function displayCart() {
   localStorage.setItem('products', JSON.stringify(products));
   console.log(products);
   displayCart()
+  displayTotal()
 } 
 
 
