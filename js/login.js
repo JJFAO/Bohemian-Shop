@@ -55,7 +55,7 @@ loginForm.onsubmit = (e) => {
         localStorage.setItem('logedAdmin', JSON.stringify(logedAdmin))
 
     } else if (userFound) {
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
         logedUser = userFound
         localStorage.setItem('logedUser', JSON.stringify(logedUser))
 

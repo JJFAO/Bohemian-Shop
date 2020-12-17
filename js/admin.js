@@ -24,7 +24,7 @@ function detectLogedUser() {
           </div>
         `
     } else {
-        window.location.href = '../docs/index.html'
+        window.location.href = '../index.html'
     }
   }
 
