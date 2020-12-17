@@ -41,8 +41,7 @@
       </button>
       <div class="collapse navbar-collapse" id="main_nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active cart"><a class="nav-link" href="../docs/cart.html"> Carrito </a>
-          </li>
+          <li class="nav-item active cart"><a class="nav-link" href="../docs/cart.html" target="_blank"> <img src="https://www.flaticon.es/svg/static/icons/svg/626/626394.svg" alt="Carrito" width="20" height="20" style="filter: invert(100%)">(<span id="cartNum"></span>) </a></li>
           <li class="nav-item dropdown" id="logInButton">
 
           </li>
@@ -53,22 +52,29 @@
   </nav>
   <!--CARRITO-->
   <main>
+    <h2 class="text-center p-3">Carrito</h2>
 
-    <!-- Table of products -->
-    <div class="container w-75 pt-3 table-responsive-lg" id="tableOfProducts">
-      <table class="table table-bordered table-hover">
+    <!--Products in responsive-->
+
+    <div id="mobileCart" class="card">
+ 
+    </div>
+
+    <h3 id="total-mobile" class="text-center p-2">Total</h3>
+    <h2 id="mobileCost" class="text-center"> </h2>
+
+    <!-- Table of products  -->
+    <div id="table-of-contents" class="container w-75 pt-3" id="tableOfProducts">
+      <table class="table" >
         <thead>
           <tr>
-            <th scope="col">
+            <th class="text-center">
               <h5>Producto</h5>
             </th>
-            <th scope="col">
-              <h5>Imagen</h5>
-            </th>
-            <th scope="col">
+            <th class="text-center">
               <h5>Cantidad</h5>
             </th>
-            <th scope="col">
+            <th class="text-center">
               <h5>Precio</h5>
             </th>
           </tr>
@@ -76,23 +82,15 @@
         <tbody id="cartTable">
 
         </tbody>
-        <tr>
-          <th scope="col"></th>
-          <th scope="col"></th>
-          <th scope="col"></th>
-          <th scope="col"></th>
-          <th scope="col">
-            <h5>Total</h5>
-          </th>
-          <th>$</th>
-          <th scope="col" id="cost"></th>
-        </tr>
       </table>
+      <h4 class="text-center">Total $ </h4>
+      <h4 id="cost" class="text-center"> </h4>
+
     </div>
     <div>
-      <h4 id="finalizar">
+      <h4 id="finalizar" class="p-5">
+        <img src="https://www.flaticon.es/svg/static/icons/svg/724/724927.svg" alt="flecha" width="30rem">
         Finalizar compra
-        <img src="https://www.flaticon.es/svg/static/icons/svg/724/724927.svg" alt="flecha" width=30px>
       </h4>
     </div>
 
@@ -109,7 +107,7 @@
           </p>
         </div>
         <div class="col-3 text-center">
-          © 2020 Copyright: <a href="https://github.com/Knifucrab/Grupo-5-Comision-5i-Proyecto-JS" target="_blank"
+          © 2020 Copyright: <a href="https://github.com/Knifucrab/BohemianShop" target="_blank"
             style="text-decoration: none; color:#ffffff">Grupo 5 RCS </a>
         </div>
         <div class="col-3 text-center">

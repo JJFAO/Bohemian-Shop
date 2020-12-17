@@ -60,3 +60,16 @@ footer{
   bottom: 0;
   width: 100%;
  }
+ 
+ @media only screen and (max-width: 768px) {
+    footer{
+        background-color: rgba(85, 85, 85, 0.445);
+        color: #ffffff;
+        position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+        font-size: smaller;
+        max-height: 20%;
+     }
+}

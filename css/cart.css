@@ -19,5 +19,22 @@ td, th, tr, .plus-minus{
 #finalizar{
   display: flex;
   justify-content: center;
+  
 }
+
+@media (min-width: 769px){
+  #mobileCart, #mobileCost, #total-mobile{
+    display: none;
+  }
+   }
+ 
+
+
+
+@media (max-width: 768px){
+ #table-of-contents{
+   display: none;
+ }
+  }
+
 
