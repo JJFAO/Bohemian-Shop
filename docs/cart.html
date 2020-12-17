@@ -52,22 +52,29 @@
   </nav>
   <!--CARRITO-->
   <main>
+    <h3 class="text-center">Carrito</h3>
 
-    <!-- Table of products -->
-    <div class="container w-75 pt-3 table-responsive-lg" id="tableOfProducts">
-      <table class="table table-bordered table-hover">
+    <!--Products in responsive-->
+
+    <div id="mobileCart" class="card">
+ 
+    </div>
+
+    <h3 class="text-center p-2">Total</h3>
+    <h2 id="mobileCost" class="text-center"> </h2>
+
+    <!-- Table of products  -->
+    <div id="table-of-contents" class="container w-75 pt-3" id="tableOfProducts">
+      <table class="table" >
         <thead>
           <tr>
-            <th scope="col">
+            <th class="text-center">
               <h5>Producto</h5>
             </th>
-            <th scope="col">
-              <h5>Imagen</h5>
-            </th>
-            <th scope="col">
+            <th class="text-center">
               <h5>Cantidad</h5>
             </th>
-            <th scope="col">
+            <th class="text-center">
               <h5>Precio</h5>
             </th>
           </tr>
@@ -75,21 +82,13 @@
         <tbody id="cartTable">
 
         </tbody>
-        <tr>
-          <th scope="col"></th>
-          <th id ="arrow" scope="col"></th>
-          <th scope="col"></th>
-          <th scope="col"></th>
-          <th scope="col">
-            <h5>Total </h5>
-          </th>
-          <th scope="col">$</th>
-          <th scope="col"  id="cost"></th>
-        </tr>
       </table>
+      <h2 class="text-center">Total $ </h2>
+      <h2 id="cost" class="text-center"> </h2>
+
     </div>
     <div>
-      <h4 id="finalizar">
+      <h4 id="finalizar" class="p-5">
         <img src="https://www.flaticon.es/svg/static/icons/svg/724/724927.svg" alt="flecha" width="30rem">
         Finalizar compra
       </h4>
