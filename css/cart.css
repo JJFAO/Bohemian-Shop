@@ -23,7 +23,7 @@ td, th, tr, .plus-minus{
 }
 
 @media (min-width: 769px){
-  #mobileCart{
+  #mobileCart, #mobileCost, #total-mobile{
     display: none;
   }
    }
